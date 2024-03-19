@@ -21,11 +21,3 @@ module "eks_cluster" {
   subnet_ids = ["subnet-0a58f7bb36b69534a","subnet-0ca455ad1f587a812","subnet-0918669d0c271ee73"]
 }
 
-terraform {
-    backend "s3" {
-        bucket = "tcn-terraform-s3-bucket"
-        key    = "tcn/terraform/remote/s3/terraform.tfstate"
-        region     = "ap-south-2"
-        dynamodb_table = "dynamodb-state-locking"
-    }
-}
