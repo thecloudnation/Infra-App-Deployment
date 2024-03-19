@@ -4,8 +4,8 @@ provider "aws" {
 
 terraform {
     backend "s3" {
-        bucket = "tcn-terraform-s3-bucket"
-        key    = "tcn/terraform/remote/s3/terraform.tfstate"
+        bucket = "terraform-s3-tcn"
+        key    = "tcn/terraform.tfstate"
         region     = "ap-south-2"
         dynamodb_table = "dynamodb-state-locking"
     }
